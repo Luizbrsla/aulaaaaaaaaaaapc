@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venda de Água</title>
+    <title>Venda de Água Mineral</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,23 +11,30 @@
             color: #00796b;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
             max-width: 800px;
-            margin: auto;
+            width: 100%;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
         }
         h1 {
             color: #004d40;
-            text-align: center;
+            margin-bottom: 20px;
         }
         img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
+            animation: bounce 2s infinite;
         }
         .product-details {
             margin: 20px 0;
@@ -36,51 +43,10 @@
             font-size: 24px;
             font-weight: bold;
             color: #004d40;
+            margin: 10px 0;
         }
         .form-group {
             margin: 10px 0;
+            text-align: left;
         }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #00796b;
-            border-radius: 4px;
-        }
-        .form-group button {
-            background-color: #00796b;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .form-group button:hover {
-            background-color: #004d40;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Venda de Água Mineral</h1>
-        <img src="https://via.placeholder.com/800x400?text=Água+Mineral" alt="Água Mineral">
-        <div class="product-details">
-            <p><strong>Descrição:</strong> Água mineral pura e refrescante, ideal para todos os momentos. Embalada em garrafa de 500ml.</p>
-            <p class="price">R$ 2,50</p>
-        </div>
-        <form action="/processar-compra" method="post">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="quantidade">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" min="1" value="1" require
+        .f

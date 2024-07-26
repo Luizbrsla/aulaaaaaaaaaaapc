@@ -49,4 +49,87 @@
             margin: 10px 0;
             text-align: left;
         }
-        .f
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #00796b;
+            border-radius: 4px;
+        }
+        .form-group button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #004d40;
+            animation: pulse 0.6s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Venda de Água Mineral</h1>
+        <img src="https://via.placeholder.com/800x400?text=Água+Mineral" alt="Água Mineral">
+        <div class="product-details">
+            <p><strong>Descrição:</strong> Água mineral pura e refrescante, ideal para todos os momentos. Embalada em garrafa de 500ml.</p>
+            <p class="price">R$ 2,50</p>
+        </div>
+        <form action="/processar-compra" method="post">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" value="1" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Comprar Agora</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

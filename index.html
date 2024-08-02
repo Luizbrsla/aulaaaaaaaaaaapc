@@ -70,4 +70,98 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin:
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .payment-info h3 {
+            margin-top: 0;
+        }
+        .payment-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .payment-info table, .payment-info th, .payment-info td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .payment-info th {
+            background: #f4f4f4;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Curso de Como Ficar Rico</h1>
+    </header>
+
+    <div class="container main-content">
+        <h2>Transforme Sua Vida Financeira!</h2>
+        <p>Descubra os segredos dos milionários e mude sua realidade financeira para sempre. Nosso curso completo vai te ensinar estratégias comprovadas para criar riqueza e alcançar a independência financeira.</p>
+
+        <div class="images">
+            <img src="https://www.example.com/imagem-riqueza1.jpg" alt="Imagem de Riqueza 1">
+            <img src="https://www.example.com/imagem-riqueza2.jpg" alt="Imagem de Riqueza 2">
+        </div>
+
+        <div class="course-description">
+            <h3>O Que Você Vai Aprender:</h3>
+            <ul>
+                <li>Planejamento financeiro eficaz</li>
+                <li>Investimentos inteligentes</li>
+                <li>Gestão de dívidas</li>
+                <li>Criação de múltiplas fontes de renda</li>
+                <li>Hábitos de sucesso</li>
+            </ul>
+        </div>
+
+        <a href="#payment" class="cta-button">Inscreva-se Agora!</a>
+    </div>
+
+    <div id="payment" class="container payment-info">
+        <h3>Informações de Pagamento</h3>
+        <p>Preencha as informações abaixo para concluir sua inscrição:</p>
+        <form action="/processar-pagamento" method="post">
+            <table>
+                <tr>
+                    <th>Nome Completo</th>
+                    <td><input type="text" name="nome" required></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <th>Telefone</th>
+                    <td><input type="tel" name="telefone" required></td>
+                </tr>
+                <tr>
+                    <th>Cartão de Crédito</th>
+                    <td><input type="text" name="cartao" required></td>
+                </tr>
+                <tr>
+                    <th>Data de Expiração</th>
+                    <td><input type="text" name="expiracao" placeholder="MM/AA" required></td>
+                </tr>
+                <tr>
+                    <th>Código de Segurança</th>
+                    <td><input type="text" name="codigo" required></td>
+                </tr>
+            </table>
+            <button type="submit" class="cta-button">Finalizar Inscrição</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Curso de Como Ficar Rico. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

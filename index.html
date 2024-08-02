@@ -1,100 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Como Ficar Rico</title>
+    <title>Venda de Curso: Como Ficar Rico</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f5f5;
             color: #333;
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 30px 0;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
             text-align: center;
-        }
-        header h1 {
-            margin: 0;
         }
         .container {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .main-content {
-            text-align: center;
+            margin: 0 auto;
             padding: 20px;
         }
-        .course-description {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin: 20px auto;
-            max-width: 600px;
+        .course-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .course-description h3 {
-            margin-top: 0;
-        }
-        .images {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .images img {
+        .course-info img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            margin: 10px;
         }
-        .cta-button {
-            background: #e8491d;
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 8px;
-            display: inline-block;
+        .course-details {
+            flex: 1;
+            margin-right: 20px;
         }
-        .cta-button:hover {
-            background: #333;
+        .course-details h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
         }
-        .payment-info {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin: 20px auto;
-            max-width: 600px;
+        .course-details p {
+            font-size: 1.2em;
+            line-height: 1.6;
         }
-        .payment-info h3 {
-            margin-top: 0;
-        }
-        .payment-info table {
+        .payment-table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
         }
-        .payment-info table, .payment-info th, .payment-info td {
+        .payment-table th, .payment-table td {
             border: 1px solid #ddd;
-            padding: 8px;
-        }
-        .payment-info th {
-            background: #f4f4f4;
-        }
-        .footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
             padding: 10px;
-            position: fixed;
+            text-align: left;
+        }
+        .payment-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .payment-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .payment-table input {
             width: 100%;
-            bottom: 0;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -102,66 +87,11 @@
     <header>
         <h1>Curso de Como Ficar Rico</h1>
     </header>
-
-    <div class="container main-content">
-        <h2>Transforme Sua Vida Financeira!</h2>
-        <p>Descubra os segredos dos milionários e mude sua realidade financeira para sempre. Nosso curso completo vai te ensinar estratégias comprovadas para criar riqueza e alcançar a independência financeira.</p>
-
-        <div class="images">
-            <img src="https://www.example.com/imagem-riqueza1.jpg" alt="Imagem de Riqueza 1">
-            <img src="https://www.example.com/imagem-riqueza2.jpg" alt="Imagem de Riqueza 2">
-        </div>
-
-        <div class="course-description">
-            <h3>O Que Você Vai Aprender:</h3>
-            <ul>
-                <li>Planejamento financeiro eficaz</li>
-                <li>Investimentos inteligentes</li>
-                <li>Gestão de dívidas</li>
-                <li>Criação de múltiplas fontes de renda</li>
-                <li>Hábitos de sucesso</li>
-            </ul>
-        </div>
-
-        <a href="#payment" class="cta-button">Inscreva-se Agora!</a>
-    </div>
-
-    <div id="payment" class="container payment-info">
-        <h3>Informações de Pagamento</h3>
-        <p>Preencha as informações abaixo para concluir sua inscrição:</p>
-        <form action="/processar-pagamento" method="post">
-            <table>
-                <tr>
-                    <th>Nome Completo</th>
-                    <td><input type="text" name="nome" required></td>
-                </tr>
-                <tr>
-                    <th>Email</th>
-                    <td><input type="email" name="email" required></td>
-                </tr>
-                <tr>
-                    <th>Telefone</th>
-                    <td><input type="tel" name="telefone" required></td>
-                </tr>
-                <tr>
-                    <th>Cartão de Crédito</th>
-                    <td><input type="text" name="cartao" required></td>
-                </tr>
-                <tr>
-                    <th>Data de Expiração</th>
-                    <td><input type="text" name="expiracao" placeholder="MM/AA" required></td>
-                </tr>
-                <tr>
-                    <th>Código de Segurança</th>
-                    <td><input type="text" name="codigo" required></td>
-                </tr>
-            </table>
-            <button type="submit" class="cta-button">Finalizar Inscrição</button>
-        </form>
-    </div>
-
-    <footer class="footer">
-        <p>&copy; 2024 Curso de Como Ficar Rico. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+    <div class="container">
+        <div class="course-info">
+            <div class="course-details">
+                <h1>Transforme Sua Vida Financeira</h1>
+                <p>Descubra os segredos dos milionários e aprenda como alcançar a independência financeira. Nosso curso oferece dicas práticas e estratégias testadas para você criar riqueza e garantir um futuro financeiro seguro.</p>
+                <p><strong>Preço do Curso:</strong> R$ 999,00</p>
+            </div>
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA/wMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAgMEBQYBBwj/xAA9EAABAwIEBAQDBQYFBQAAAAABAAIDBBEFEiExBhNBUSJhcYEUMpEjQlKhsQdicoLB8BUz0eHxFiRDkqL/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDBP/EACERAQEAAgICAwADAAAAAAAAAAABAhEhMQMSE0FRMmFx/9oADAMBAAIRAxEAPwDzWndQumaI4XSknQlIxmhDJLU78pIvkunpaiiwiIxw5Zajq7sqWfEJJXl2pcfNNMMyNniNnB1kyS07hSW1kw0czM3zC66SmkHiYWuSUh2B2CE+6n0zRuzDdM+qA4gboQNwg0qrH2bPRRbKTUnwM9FHQHLIA1C6usF3hAWMEV4r26KPWNyqypm/ZD0VdXnxWTJDQuoSNxC6hAcQuroGiAdYz/t3O801YqXHc0bhdurkyWEA+IFAM7p0tzQg9k0OqkwAGmcDuEBE6LqEIAQhCAEIXEB1CAL7JxkTnbNKCT8OwesxKW7WFrbXL3DdWYhwrCjlm+2mClU+MSOw6qqbBuQENA2VBhdL/iGINbLdzSbu7FBLYYxHMbU2G5+guAiejqK0C9A2G/W60DMNpuW50BZ9mLH18kyZpshYw2aDt1QFBPw1WwNzxHTq0HVVlZRzMYHGnkYBuXBauWWTUyVDgANrqK+ua+0Zc54PR2yBtkLdQuDUhaabBHVzTLT00rB0e1uioamiqKR5E0T2gH5i02PultXJM5uG+QTSU83skpgJ2nbmeE0plGzxAoCzjGWBU9Ybvurp1mwqkqNSnShtlrapJ302R1R3SMIAupeHYbW4pUCDD6WWok7Rtvb1OwWuw7gelpiX4/iDQ9li+lpSHOaP3nbDZK3RWsZS0tRWTCGlhfNKdmsbcrS03Bc0UfOxythw+O1ywnPJbuQNvda6grqCG9HgDaOhhByyTF9idNCZNz10APqtBg3DGHVErZcQxGnr3FxPJzWj17Mvr0+YuKm5Ft5pJwdUyUrpcGqoMVgGtoTaQerSs3URPp5XRTwyRSD7r25T9CvcsX4RoHzuqfhzhst

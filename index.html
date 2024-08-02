@@ -1,157 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venda de Água Mineral</title>
+    <title>Curso de Como Ficar Rico</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e0f7fa;
-            color: #00796b;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .main-content {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            width: 100%;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
             text-align: center;
-            animation: fadeIn 1s ease-out;
-        }
-        h1 {
-            color: #004d40;
-            margin-bottom: 20px;
-        }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .gallery img {
-            width: 200px;
-            height: 200px;
-            border-radius: 8px;
-            object-fit: cover;
-            animation: zoomIn 2s infinite;
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.1);
-        }
-        .product-details {
-            margin: 20px 0;
-        }
-        .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #004d40;
-            margin: 10px 0;
-        }
-        .form-group {
-            margin: 10px 0;
-            text-align: left;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #00796b;
-            border-radius: 4px;
-        }<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venda de Água Mineral</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e0f7fa;
-            color: #00796b;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            width: 100%;
             padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            animation: fadeIn 1s ease-out;
         }
-        h1 {
-            color: #004d40;
-            margin-bottom: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            animation: bounce 2s infinite;
-        }
-        .product-details {
-            margin: 20px 0;
-        }
-        .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #004d40;
-            margin: 10px 0;
-        }
-        .form-group {
-            margin: 10px 0;
-            text-align: left;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #00796b;
-            border-radius: 4px;
-        }
-        .form-group button {
-            background-color: #00796b;
-            color: white;
-
-        .form-group button {
-            background-color: #00796b;
-            color: white;
+        .cta-button {
+            background: #e8491d;
+            color: #fff;
+            padding: 15px 30px;
             border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
             font-size: 16px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
         }
-        .form-group button:hover {
-            background-color: #004d40;
-            transform: scale(1.05);
+        .cta-button:hover {
+            background: #333;
         }
-        @keyframes zoomIn {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-  
+        .course-description {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Curso de Como Ficar Rico</h1>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <h2>Transforme Sua Vida Financeira!</h2>
+        <p>Descubra os segredos dos milionários e mude sua realidade financeira para sempre. Nosso curso completo vai te ensinar estratégias comprovadas para criar riqueza e alcançar a independência financeira.</p>
+        
+        <div class="course-description">
+            <h3>O Que Você Vai Aprender:</h3>
+            <ul>
+                <li>Planejamento financeiro eficaz</li>
+                <li>Investimentos inteligentes</li>
+                <li>Gestão de dívidas</li>
+                <li>Criação de múltiplas fontes de renda</li>
+                <li>Hábitos de sucesso</li>
+            </ul>
+        </div>
+
+        <a href="#inscricao" class="cta-button">

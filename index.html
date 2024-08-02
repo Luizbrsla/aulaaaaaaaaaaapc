@@ -12,29 +12,44 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
         header {
             background: #333;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
+            padding: 30px 0;
             text-align: center;
         }
         header h1 {
             margin: 0;
         }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
         .main-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             text-align: center;
             padding: 20px;
+        }
+        .course-description {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .course-description h3 {
+            margin-top: 0;
+        }
+        .images {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px;
         }
         .cta-button {
             background: #e8491d;
@@ -44,48 +59,15 @@
             font-size: 16px;
             cursor: pointer;
             text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
         }
         .cta-button:hover {
             background: #333;
         }
-        .course-description {
+        .payment-info {
             background: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin: 20px 0;
-        }
-        .footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Curso de Como Ficar Rico</h1>
-        </div>
-    </header>
-
-    <div class="container main-content">
-        <h2>Transforme Sua Vida Financeira!</h2>
-        <p>Descubra os segredos dos milionários e mude sua realidade financeira para sempre. Nosso curso completo vai te ensinar estratégias comprovadas para criar riqueza e alcançar a independência financeira.</p>
-        
-        <div class="course-description">
-            <h3>O Que Você Vai Aprender:</h3>
-            <ul>
-                <li>Planejamento financeiro eficaz</li>
-                <li>Investimentos inteligentes</li>
-                <li>Gestão de dívidas</li>
-                <li>Criação de múltiplas fontes de renda</li>
-                <li>Hábitos de sucesso</li>
-            </ul>
-        </div>
-
-        <a href="#inscricao" class="cta-button">
+            margin: 

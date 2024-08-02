@@ -1,4 +1,4 @@
-/* Reset básico e configurações iniciais */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +8,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Cabeçalho */
 header {
     background: #333;
     color: #fff;
@@ -16,6 +17,7 @@ header {
     animation: fadeIn 2s ease-in-out;
 }
 
+/* Estilizando o título do cabeçalho */
 header h1 {
     margin: 0;
 }
@@ -56,11 +58,12 @@ header h1 {
     height: auto;
     border-radius: 8px;
     margin: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .images img:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Botão de chamada para ação */

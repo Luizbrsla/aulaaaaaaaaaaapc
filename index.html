@@ -1,180 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Como Ficar Rico</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .main-content {
-            text-align: center;
-            padding: 15px;
-        }
-        .course-description, .payment-info {
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin: 15px 0;
-        }
-        .course-description h3 {
-            margin-top: 0;
-            font-size: 18px;
-        }
-        .images {
-            text-align: center;
-            margin: 15px 0;
-        }
-        .images img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 5px 0;
-        }
-        .cta-button {
-            background: #e8491d;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            font-size: 14px;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 8px;
-            display: inline-block;
-            margin: 10px 0;
-        }
-        .cta-button:hover {
-            background: #333;
-        }
-        .payment-info table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-        }
-        .payment-info table, .payment-info th, .payment-info td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        .payment-info th {
-            background: #f4f4f4;
-        }
-        .footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendador de Jogos</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script&gt;
+  <style>
+    .box {
+      width: 850px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid #4c0073;
+      border-radius: 10px;
+      background-color: #f4f4f4;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
 
-        /* Estilos responsivos */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 20px;
-            }
-            .container {
-                width: 95%;
-            }
-            .course-description h3 {
-                font-size: 16px;
-            }
-            .cta-button {
-                padding: 12px 24px;
-                font-size: 16px;
-            }
-            .payment-info table, .payment-info th, .payment-info td {
-                font-size: 12px;
-                padding: 6px;
-            }
-        }
-    </style>
+    h2 {
+      color: #4c0073;
+    }
+
+    span, input, label {
+      font-size: 18px;
+      margin: 10px;
+      color: #333;
+    }
+
+    .input-container {
+      display: inline-block;
+    }
+
+    iframe {
+      margin-top: 20px;
+      border: 2px solid #4c0073;
+      border-radius: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    button {
+      margin-left: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Curso de Como Ficar Rico</h1>
-    </header>
-
-    <div class="container main-content">
-        <h2>Transforme Sua Vida Financeira!</h2>
-        <p>Descubra os segredos dos milionários e mude sua realidade financeira para sempre. Nosso curso completo vai te ensinar estratégias comprovadas para criar riqueza e alcançar a independência financeira.</p>
-
-        <div class="images">
-            <img src="https://www.example.com/imagem-riqueza1.jpg" alt="Imagem de Riqueza 1">
-            <img src="https://www.example.com/imagem-riqueza2.jpg" alt="Imagem de Riqueza 2">
-        </div>
-
-        <div class="course-description">
-            <h3>O Que Você Vai Aprender:</h3>
-            <ul>
-                <li>Planejamento financeiro eficaz</li>
-                <li>Investimentos inteligentes</li>
-                <li>Gestão de dívidas</li>
-                <li>Criação de múltiplas fontes de renda</li>
-                <li>Hábitos de sucesso</li>
-            </ul>
-        </div>
-
-        <a href="#payment" class="cta-button">Inscreva-se Agora!</a>
+  <div class="box">
+    <h2>Recomendador de Jogos</h2>
+   
+    <div class="input-container">
+      <span>Sua idade:</span>
+      <input id="idadeInput" type="number" value="5" />
+      <button id="resetButton">Reset</button>
     </div>
 
-    <div id="payment" class="container payment-info">
-        <h3>Informações de Pagamento</h3>
-        <p>Preencha as informações abaixo para concluir sua inscrição:</p>
-        <form action="/processar-pagamento" method="post">
-            <table>
-                <tr>
-                    <th>Nome Completo</th>
-                    <td><input type="text" name="nome" required></td>
-                </tr>
-                <tr>
-                    <th>Email</th>
-                    <td><input type="email" name="email" required></td>
-                </tr>
-                <tr>
-                    <th>Telefone</th>
-                    <td><input type="tel" name="telefone" required></td>
-                </tr>
-                <tr>
-                    <th>Cartão de Crédito</th>
-                    <td><input type="text" name="cartao" required></td>
-                </tr>
-                <tr>
-                    <th>Data de Expiração</th>
-                    <td><input type="text" name="expiracao" placeholder="MM/AA" required></td>
-                </tr>
-                <tr>
-                    <th>Código de Segurança</th>
-                    <td><input type="text" name="codigo" required></td>
-                </tr>
-            </table>
-            <button type="submit" class="cta-button">Finalizar Inscrição</button>
-        </form>
-    </div>
+    <!-- Iframe para exibir o jogo -->
+    <iframe id="gameIframe" width="485" height="402" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <p id="statusMessage">Em construção</p>
 
-    <footer class="footer">
-        <p>&copy; 2024 Curso de Como Ficar Rico. Todos os direitos reservados.</p>
-    </footer>
+    <script>
+      const gameIframe = document.getElementById('gameIframe');
+      const idadeInput = document.getElementById('idadeInput');
+      const statusMessage = document.getElementById('statusMessage');
+      const resetButton = document.getElementById('resetButton');
+
+      // Mantém o iframe escondido inicialmente
+      gameIframe.classList.add('hidden');
+
+      // Função para exibir o jogo com base na idade
+      function geraRecomendacao(idade) {
+        if (idade == 15) {
+          gameIframe.src = "https://scratch.mit.edu/projects/391386137;;
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else if (idade == 14) {
+          gameIframe.src = "https://scratch.mit.edu/projects/712511942/embed&quot;;
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else {
+          gameIframe.classList.add('hidden');
+          statusMessage.textContent = "Em construção";
+        }
+      }
+
+      // Detecta o pressionamento da tecla Enter no campo de idade
+      idadeInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          geraRecomendacao(idadeInput.value);
+          idadeInput.disabled = true; // Bloqueia a edição após a escolha
+        }
+      });
+
+      // Botão de reset para liberar a troca de idade
+      resetButton.addEventListener('click', function() {
+        gameIframe.src = "";
+        statusMessage.textContent = "Em construção";
+        idadeInput.disabled = false; // Libera o campo para alteração
+      });
+    </script>
+  </div>
 </body>
 </html>

@@ -72,12 +72,23 @@
 
       // Função para exibir o jogo com base na idade
       function geraRecomendacao(idade) {
-        if (idade == 14) {
+        if (idade == 16) {
           gameIframe.src = "https://scratch.mit.edu/projects/391386137/embed";
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
-        } else if (idade == 16) {
+        } else if (idade == 15) {
           gameIframe.src = "https://scratch.mit.edu/projects/538546818/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else 
+          gameIframe.classList.add('hidden');
+          statusMessage.textContent = "Em construção";
+        if (idade == 14) {
+          gameIframe.src = "https://scratch.mit.edu/projects/500740135/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else if (idade == 13) {
+          gameIframe.src = "https://scratch.mit.edu/projects/313744605/embed";
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
         } else {

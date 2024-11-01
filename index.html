@@ -94,6 +94,10 @@
         } else {
           gameIframe.classList.add('hidden');
           statusMessage.textContent = "Em construção";
+        } else if (idade == 12) {
+          gameIframe.src = "https://scratch.mit.edu/projects/538546818/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
         }
       }
 
